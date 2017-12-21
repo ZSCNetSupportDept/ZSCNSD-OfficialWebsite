@@ -17,7 +17,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'public': path.resolve(__dirname, '../public')
+      'public': path.resolve(__dirname, '../public'),
+      'src': path.resolve(__dirname, '../src')
     }
   },
   module: {
@@ -45,9 +46,9 @@ module.exports = {
         test: /\.css$/,
         use: isProd
           ? ExtractTextPlugin.extract({
-              use: 'css-loader?minimize',
-              fallback: 'vue-style-loader'
-            })
+            use: 'css-loader?minimize',
+            fallback: 'vue-style-loader'
+          })
           : ['vue-style-loader', 'css-loader']
       },
       {
@@ -56,12 +57,12 @@ module.exports = {
         options: {
           preprocess: function (MarkdownIt, Source) {
             MarkdownIt.renderer.rules.table_open = function () {
-              return '<div class="table-container"><table class="table">';
-            };
+              return '<div class="table-container"><table class="table">'
+            }
             MarkdownIt.renderer.rules.table_close = function () {
-              return '</table></div>';
-            };
-            return Source;
+              return '</table></div>'
+            }
+            return Source
           }
         }
       }
@@ -73,15 +74,15 @@ module.exports = {
   },
   plugins: isProd
     ? [
-        new webpack.optimize.UglifyJsPlugin({
-          compress: { warnings: false }
-        }),
-        new webpack.optimize.ModuleConcatenationPlugin(),
-        new ExtractTextPlugin({
-          filename: 'common.[chunkhash].css'
-        })
-      ]
+      new webpack.optimize.UglifyJsPlugin({
+        compress: { warnings: false }
+      }),
+      new webpack.optimize.ModuleConcatenationPlugin(),
+      new ExtractTextPlugin({
+        filename: 'common.[chunkhash].css'
+      })
+    ]
     : [
-        new FriendlyErrorsPlugin()
-      ]
+      new FriendlyErrorsPlugin()
+    ]
 }
