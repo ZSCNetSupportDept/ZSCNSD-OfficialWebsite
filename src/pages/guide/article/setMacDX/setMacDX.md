@@ -123,7 +123,7 @@
     3. 如果搜索不到那个，那就买一个吧！
     
     
-[上一条：电信电脑端设置上网(Windows)](/guide/windowsDX)
+[上一条：电信电脑端设置上网(Windows)](/guide/setWindowsDX)
 
 [下一条：移动及联通电脑端上网前的准备](/guide/preparePPPoE)
     

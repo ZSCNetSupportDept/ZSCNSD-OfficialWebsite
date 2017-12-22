@@ -12,8 +12,8 @@ const guidePage = () => import('../pages/guide/guide.vue')
 const guideForeword = () => import('../pages/guide/article/foreword/foreword.md')
 const guideNetEnv = () => import('../pages/guide/article/netenv/netenv.md')
 const guidePrepareDX = () => import('../pages/guide/article/prepareDX/prepareDX.md')
-const guideWindowsDX = () => import('../pages/guide/article/windowsDX/windowsDX.md')
-const guideMacDX = () => import('../pages/guide/article/macDX/macDX.md')
+const guideSetWindowsDX = () => import('../pages/guide/article/setWindowsDX/setWindowsDX.md')
+const guideSetMacDX = () => import('../pages/guide/article/setMacDX/setMacDX.md')
 const guidePreparePPPoE = () => import('../pages/guide/article/preparePPPoE/preparePPPoE.md')
 const guideSetPPPoE = () => import('../pages/guide/article/setPPPoE/setPPPoE.md')
 const guidePreparePhoneDX = () => import('../pages/guide/article/preparePhoneDX/preparePhoneDX.md')
@@ -23,6 +23,11 @@ const guideRepairDX = () => import('../pages/guide/article/repairDX/repairDX.md'
 const guideRepairPPPoE = () => import('../pages/guide/article/repairPPPoE/repairPPPoE.md')
 const guideRepairWay = () => import('../pages/guide/article/repairWay/repairWay.md')
 const guideJoinUs = () => import('../pages/guide/article/joinUs/joinUs.md')
+
+const repairGuidePage = () => import('../pages/repairGuide/repairGuide.vue')
+const repairGuideWechat = () => import('../pages/repairGuide/article/wechat/wechat.md')
+const repairGuidePhone = () => import('../pages/repairGuide/article/phone/phone.md')
+const repairGuidePaper = () => import('../pages/repairGuide/article/paper/paper.md')
 
 export function createRouter () {
   return new Router({
@@ -63,12 +68,12 @@ export function createRouter () {
             component: guidePrepareDX
           },
           {
-            path: 'windowsDX',
-            component: guideWindowsDX
+            path: 'setWindowsDX',
+            component: guideSetWindowsDX
           },
           {
-            path: 'macDX',
-            component: guideMacDX
+            path: 'setMacDX',
+            component: guideSetMacDX
           },
           {
             path: 'preparePPPoE',
@@ -109,6 +114,24 @@ export function createRouter () {
           {
             path: '*',
             component: guideForeword
+          }
+        ]
+      },
+      {
+        path: '/repairGuide',
+        component: repairGuidePage,
+        children: [
+          {
+            path: 'wechat',
+            component: repairGuideWechat
+          },
+          {
+            path: 'phone',
+            component: repairGuidePhone
+          },
+          {
+            path: 'paper',
+            component: repairGuidePaper
           }
         ]
       },

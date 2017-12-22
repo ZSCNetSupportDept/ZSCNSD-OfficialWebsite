@@ -12,4 +12,4 @@
 
 [上一条：校园网络环境介绍](/guide/netenv)
 
-[下一条：电信电脑端设置上网(Windows)](/guide/windowsDX)
+[下一条：电信电脑端设置上网(Windows)](/guide/setWindowsDX)

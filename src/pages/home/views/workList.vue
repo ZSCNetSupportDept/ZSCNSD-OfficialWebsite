@@ -1,5 +1,5 @@
 <template>
-  <div class="work-list">
+  <div class="work-list" id="worklist">
     <div class="work-list__header">
       <h1>值班表</h1>
       <h2>认准我们的值班人员</h2>

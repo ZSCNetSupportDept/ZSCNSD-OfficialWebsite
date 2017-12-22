@@ -1,5 +1,5 @@
 <template>
-  <div class="guide">
+  <div class="repair-guide">
     <page-header></page-header>
 
     <article-nav></article-nav>
@@ -17,11 +17,10 @@
 
   export default {
     components: {
+      articleNav,
       PageFooter,
-      PageHeader,
-      articleNav
-    },
-    name: 'guide'
+      PageHeader },
+    name: 'repairGuide'
   }
 </script>
 
