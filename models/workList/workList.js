@@ -18,24 +18,24 @@ function refreshData () {
   let firstSheet = workbook.Sheets[firstSheetName]
 
   let jsonSheet = XLSX.utils.sheet_to_json(firstSheet, {
-    header: ['地点', '周一', '周二', '周三', '周四', '周五', '周六', '周日']
+    header: ['地点', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日']
   })
 
   // handle table data
   let tableData = jsonSheet.filter(item => {
-    if (item['地点'] && !item['地点'].includes('周')) {
+    if (item['地点'] && Object.keys(item).length === 8) {
       return item
     }
   })
   let tempTable = [];
-  ['周一', '周二', '周三', '周四', '周五', '周六', '周日'].forEach(day => {
+  ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'].forEach(day => {
     tempTable.push({
       title: day,
       content: []
     })
   })
   tableData.forEach(item => {
-    ['周一', '周二', '周三', '周四', '周五', '周六', '周日'].forEach((day, index) => {
+    ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'].forEach((day, index) => {
       let data = item[day].split(/-+/)
 
       tempTable[index].content.push({

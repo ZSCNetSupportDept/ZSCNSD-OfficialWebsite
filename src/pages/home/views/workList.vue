@@ -37,8 +37,6 @@
 </template>
 
 <script>
-  //  import workListModule from 'src/store/module/home/workList'
-
   export default {
     name: 'workList',
     props: {
@@ -48,7 +46,7 @@
     },
     data () {
       return {
-        nowPane: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][new Date().getDay()]
+        nowPane: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'][new Date().getDay()]
       }
     },
     methods: {

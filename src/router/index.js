@@ -26,7 +26,7 @@ const guideJoinUs = () => import('../pages/guide/article/joinUs/joinUs.md')
 
 const repairGuidePage = () => import('../pages/repairGuide/repairGuide.vue')
 const repairGuideWechat = () => import('../pages/repairGuide/article/wechat/wechat.md')
-const repairGuidePhone = () => import('../pages/repairGuide/article/phone/phone.md')
+const repairGuidePhone = () => import('../pages/repairGuide/article/phone/phone.vue')
 const repairGuidePaper = () => import('../pages/repairGuide/article/paper/paper.md')
 
 export function createRouter () {
