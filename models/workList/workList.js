@@ -3,6 +3,7 @@
  */
 
 const XLSX = require('xlsx')
+const fs = require('fs')
 let filePath = ``
 
 let data = {}
@@ -10,6 +11,10 @@ let data = {}
 function start (path) {
   filePath = path
   refreshData()
+
+  fs.watchFile(filePath, () => {
+    refreshData()
+  })
 }
 
 function refreshData () {
