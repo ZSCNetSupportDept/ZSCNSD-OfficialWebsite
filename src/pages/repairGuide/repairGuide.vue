@@ -2,9 +2,11 @@
   <div class="repair-guide">
     <page-header></page-header>
 
-    <article-nav></article-nav>
+    <div class="repair-guide__content markdown-body">
+      <article-nav></article-nav>
 
-    <router-view></router-view>
+      <router-view></router-view>
+    </div>
 
     <page-footer></page-footer>
   </div>
@@ -19,11 +21,11 @@
     components: {
       articleNav,
       PageFooter,
-      PageHeader },
+      PageHeader
+    },
     name: 'repairGuide'
   }
 </script>
 
 <style scoped>
-
 </style>

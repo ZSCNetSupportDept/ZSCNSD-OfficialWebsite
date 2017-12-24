@@ -2,9 +2,11 @@
   <div class="guide">
     <page-header></page-header>
 
-    <article-nav></article-nav>
+    <div class="guide__content markdown-body">
+      <article-nav></article-nav>
 
-    <router-view></router-view>
+      <router-view></router-view>
+    </div>
 
     <page-footer></page-footer>
   </div>

@@ -8,6 +8,9 @@ import {createRouter} from './router'
 import {sync} from 'vuex-router-sync'
 
 import titleMixin from './util/title'
+import './assets/stylesheets/cssreset.css'
+import './assets/stylesheets/base.css'
+import '../node_modules/github-markdown-css/github-markdown.css'
 
 // mixin for handling title
 Vue.mixin(titleMixin)

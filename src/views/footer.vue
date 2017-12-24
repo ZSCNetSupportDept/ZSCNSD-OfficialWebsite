@@ -1,9 +1,9 @@
 <template>
   <div class="footer">
-    <div class="footer-main">
+    <div class="footer-main container">
       <div class="footer-main__contact">
         <div class="footer-main__contact-header">
-          <h1>联系我们</h1>
+          <h2>联系我们</h2>
         </div>
 
         <address class="footer-main__contact-content">
@@ -46,7 +46,7 @@
           </ul>
         </div>
       </div><!-- / footer-main__aboutus -->
-    </div><!-- / footer__main -->
+    </div><!-- / footer-main -->
 
     <p>Copyright © 2017 中山学院网络维护科</p>
   </div>
@@ -59,5 +59,38 @@
 </script>
 
 <style scoped>
+  .footer {
+    padding: 2rem 0 1rem 0;
+    color: #5f6a6b;
+    background-color: #eee;
+  }
 
+  .footer > p {
+    margin-top: 1rem;
+    font-size: .8rem;
+    text-align: center;
+  }
+
+  .footer h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #5e696a;
+    margin-bottom: 1rem;
+  }
+
+  .footer address {
+    font-size: .9rem;
+    line-height: 1.5em;
+  }
+
+  .footer a {
+    font-size: .9rem;
+    line-height: 1.4em;
+    color: #3598db;
+  }
+
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1.6fr 1.3fr 1fr;
+  }
 </style>
