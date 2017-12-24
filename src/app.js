@@ -9,6 +9,7 @@ import {sync} from 'vuex-router-sync'
 
 import titleMixin from './util/title'
 import './assets/stylesheets/cssreset.css'
+import './assets/stylesheets/cv-zscnsd.css'
 import './assets/stylesheets/base.css'
 import '../node_modules/github-markdown-css/github-markdown.css'
 

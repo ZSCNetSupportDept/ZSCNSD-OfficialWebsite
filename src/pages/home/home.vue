@@ -10,7 +10,7 @@
 
     <page-footer></page-footer>
 
-    <youku-video src=""></youku-video>
+    <youku-video :src="youkuSrc" v-on:cancel="cancel"></youku-video>
   </div>
 </template>
 
@@ -40,9 +40,19 @@
     destroyed () {
       this.$store.unregisterModule('workList')
     },
+    data () {
+      return {
+        youkuSrc: 'http://player.youku.com/embed/XMTcyNzQ1NjM1Mg=='
+      }
+    },
     computed: {
       workList () {
         return this.$store.state.workList.workList
+      }
+    },
+    methods: {
+      cancel () {
+        this.youkuSrc = ''
       }
     }
   }

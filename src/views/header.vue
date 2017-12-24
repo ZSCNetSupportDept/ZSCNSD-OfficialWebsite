@@ -72,7 +72,7 @@
     position: relative;
     display: inline-block;
     padding: 10px 0;
-    z-index: 1001;
+    z-index: 1;
   }
 
   .header-nav a {

@@ -8,7 +8,7 @@
     props: {
       show: {
         type: Boolean,
-        required: true
+        required: false
       },
       click: {
         type: Function,
