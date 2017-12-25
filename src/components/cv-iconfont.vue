@@ -1,5 +1,5 @@
 <template>
-  <svg class="iconfont" aria-hidden="true">
+  <svg class="cv-iconfont" aria-hidden="true">
     <use :xlink:href="'#'+code"></use>
   </svg>
 </template>
@@ -16,7 +16,7 @@
 </script>
 
 <style scoped>
-  .iconfont {
+  .cv-iconfont {
     width: 1em;
     height: 1em;
     vertical-align: -0.15em;

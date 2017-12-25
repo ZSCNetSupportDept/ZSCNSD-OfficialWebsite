@@ -11,6 +11,8 @@
     <page-footer></page-footer>
 
     <youku-video :src="youkuSrc" v-on:cancel="cancel"></youku-video>
+
+    <go-top></go-top>
   </div>
 </template>
 
@@ -21,11 +23,13 @@
   import RepairNav from './views/repairNav.vue'
   import Announcement from './views/announcement.vue'
   import YoukuVideo from './views/youkuVideo.vue'
+  import GoTop from '../../views/goTop.vue'
 
   import workListModule from '../../store/module/home/workList'
 
   export default {
     components: {
+      GoTop,
       YoukuVideo,
       Announcement,
       RepairNav,

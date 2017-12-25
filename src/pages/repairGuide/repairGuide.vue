@@ -9,6 +9,8 @@
     </div>
 
     <page-footer></page-footer>
+
+    <go-top></go-top>
   </div>
 </template>
 
@@ -16,9 +18,11 @@
   import PageHeader from '../../views/header.vue'
   import PageFooter from '../../views/footer.vue'
   import articleNav from './articleNav.md'
+  import GoTop from '../../views/goTop.vue'
 
   export default {
     components: {
+      GoTop,
       articleNav,
       PageFooter,
       PageHeader

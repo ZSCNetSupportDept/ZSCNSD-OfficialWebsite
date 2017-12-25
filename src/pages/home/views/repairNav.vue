@@ -82,7 +82,7 @@
     text-align: center;
   }
 
-  .content__item .iconfont {
+  .content__item .cv-iconfont {
     width: 43%;
     height: auto;
     fill: #606a6c;
