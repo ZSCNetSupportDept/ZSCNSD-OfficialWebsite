@@ -23,7 +23,10 @@
       PageFooter,
       PageHeader
     },
-    name: 'repairGuide'
+    name: 'repairGuide',
+    title () {
+      return '报修指引'
+    }
   }
 </script>
 

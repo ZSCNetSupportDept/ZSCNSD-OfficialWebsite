@@ -1,6 +1,14 @@
 <template>
   <div class="cv-carousel" @mouseenter="stopLoop" @mouseleave="beginLoop">
     <slot></slot>
+
+    <div class="cv-carousel-nav">
+      <ul>
+        <li v-for="(_, index) in items" :class="{ active: index === activeIndex }">
+          <a @click.prevent="setActiveItem(index)"></a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -41,6 +49,8 @@
       }
     },
     mounted () {
+      this.setActiveItem(this.activeIndex)
+
       this.beginLoop()
     },
     beforeDestroy () {

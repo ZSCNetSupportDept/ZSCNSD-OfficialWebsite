@@ -40,6 +40,9 @@
     destroyed () {
       this.$store.unregisterModule('workList')
     },
+    title () {
+      return '首页'
+    },
     data () {
       return {
         youkuSrc: ``

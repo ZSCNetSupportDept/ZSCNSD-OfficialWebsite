@@ -11,7 +11,7 @@ const serverTitleMixin = {
   created () {
     const title = getTitle(this)
     if (title) {
-      this.$ssrContext.title = `中山学院网维 | ${title}`
+      this.$ssrContext.title = `中山学院网络维护科 | ${title}`
     }
   }
 }
@@ -20,7 +20,7 @@ const clientTitleMixin = {
   mounted () {
     const title = getTitle(this)
     if (title) {
-      document.title = `中山学院网维 | ${title}`
+      document.title = `中山学院网络维护科 | ${title}`
     }
   }
 }

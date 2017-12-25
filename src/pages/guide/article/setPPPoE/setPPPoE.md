@@ -5,15 +5,15 @@
 1. 打开网络与共享中心:打开电脑，右下角找到这样一个图标，右键一下，然后点击“打开网络和共享中心”。
 在出现的窗口中点击“设置新的连接和网络”（如下图）
 
-![](./image/setPPPoE_img1.png)
+   ![](./image/setPPPoE_img1.png)
 
 2. 然后点击“连接到Internet”（如下图）
 
-![](./image/setPPPoE_img2.png)
+   ![](./image/setPPPoE_img2.png)
 
 3. 在接下来的窗口中，选择“宽带（PPPoE）”，然后输入你办理的宽带账号密码，确认后就可以上网了。
 
-![](./image/setPPPoE_img3.png)
+   ![](./image/setPPPoE_img3.png)
 
 这里要注意一下：移动用户的账号格式是手机号码末尾加上@139.gd，密码默认为身份证后六位 ，若有x就往前推一位，另外有个别用户密码是手机号码后六位。
 

@@ -23,7 +23,10 @@
       PageHeader,
       articleNav
     },
-    name: 'guide'
+    name: 'guide',
+    title () {
+      return '网络指引'
+    }
   }
 </script>
 

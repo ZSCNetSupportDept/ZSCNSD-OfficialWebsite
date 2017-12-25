@@ -2,6 +2,7 @@
   <section>
     <h2>电话报修</h2>
     <p>请尽可能按照周内值班时间点负责人进行电话报修,如果联系不上,请联系周内其他负责人</p>
+
     <div class="table-container">
       <table class="table">
         <thead>
@@ -35,6 +36,8 @@
         </tbody>
       </table>
     </div>
+
+    <a href="/repairGuide/paper">上一条：纸质报修</a>
   </section>
 </template>
 

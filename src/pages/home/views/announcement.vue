@@ -83,6 +83,10 @@
     transition: all .7s linear;
   }
 
+  .cv-carousel-item:first-of-type {
+    z-index: 1;
+  }
+
   .carousel-guide {
     background-image: url("../image/an_img1.png");
   }

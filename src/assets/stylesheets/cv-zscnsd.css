@@ -12,3 +12,35 @@
   display: block;
   background-color: rgba(0, 0, 0, .5);
 }
+
+/*  cv-carousel  */
+.cv-carousel-nav {
+  position: absolute;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  display: block;
+  text-align: center;
+}
+
+.cv-carousel-nav li {
+  display: inline-block;
+  margin: 0 .3rem;
+}
+
+.cv-carousel-nav a {
+  display: block;
+  width: .7rem;
+  height: .7rem;
+  border: 1px solid #fff;
+  border-radius: 180%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.cv-carousel-nav li.active a {
+  background-color: #fff;
+  transform: scale(1.1);
+}

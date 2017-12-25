@@ -6,31 +6,31 @@
 
 2. 选择更改配置器设置:
 
-![](./images/setWindowsDX_img2.png)
+   ![](./images/setWindowsDX_img2.png)
 
 3. 鼠标右键点击以太网选择 属性栏
 
-![](./images/setWindowsDX_img3.png)
+   ![](./images/setWindowsDX_img3.png)
 
 4. 选择ipv4的属性
 
-![](./images/setWindowsDX_img4.png)
+   ![](./images/setWindowsDX_img4.png)
 
 5. 随后点击自动获取IP和自动获取DNS即完成自动获取IP了
 
-![](./images/setWindowsDX_img5.png)
+   ![](./images/setWindowsDX_img5.png)
 
 6. 在浏览器中访问[天翼客户端网址](http://zsteduapp.10000.gd.cn/index.html)。弹出页面后点击按钮（如下图）
 
-![](./images/setWindowsDX_img6.png)
+   ![](./images/setWindowsDX_img6.png)
 
 7. 根据提示，下载与你的电脑系统对应的客户端程序。
 
-![](./images/setWindowsDX_img7.png)
+   ![](./images/setWindowsDX_img7.png)
 
 8. 下载并安装，打开天翼校园，你将会看到这样的画面：
 
-![](./images/setWindowsDX_img8.png)
+   ![](./images/setWindowsDX_img8.png)
 
 9. 正确输入你的账号密码就可以上网啦。
 

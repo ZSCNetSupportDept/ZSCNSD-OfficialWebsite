@@ -2,14 +2,14 @@
 
 1. 首先看看宿舍有没有这样一个东西“交换机”（如下图），同时检查它的小电源还在不在。（只有香晖苑不需要）
 
-![](./image/preparePPPoE_img1.jpg)
+   ![](./image/preparePPPoE_img1.jpg)
 
 2. 如果没有的话可以去实验楼B207信息中心领取交换机，确认完好可用后，按照下图将其连接。
 
-![](./image/preparePPPoE_img2.png)
+   ![](./image/preparePPPoE_img2.png)
 
 3. 连接完毕后，我们的准备工作就告一段落了。
 
-[上一条：电信电脑端设置上网(macOS)](/guide/macDX)
+[上一条：电信电脑端设置上网(macOS)](/guide/setMacDX)
 
 [下一条：移动及联通电脑端设置上网](/guide/setPPPoE)

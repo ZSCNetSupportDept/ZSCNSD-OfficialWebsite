@@ -82,7 +82,7 @@
   }
 
   .work-list__header h2 {
-    margin-bottom: .8rem;
+    margin-bottom: 1rem;
     font-size: .8rem;
     color: #5e696a;
   }
