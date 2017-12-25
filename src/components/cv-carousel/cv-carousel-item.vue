@@ -16,7 +16,9 @@
     },
     methods: {
       translateItem (index, activeIndex) {
-        let parentWidth = this.$parent.$el.offsetWidth
+        let parentWidth = parseInt(this.$parent.$el.offsetWidth)
+        console.log(index)
+        console.log(activeIndex)
         this.translate = (index - activeIndex) * parentWidth
       }
     },

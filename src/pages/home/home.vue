@@ -42,7 +42,7 @@
     },
     data () {
       return {
-        youkuSrc: 'http://player.youku.com/embed/XMTcyNzQ1NjM1Mg=='
+        youkuSrc: ''
       }
     },
     computed: {

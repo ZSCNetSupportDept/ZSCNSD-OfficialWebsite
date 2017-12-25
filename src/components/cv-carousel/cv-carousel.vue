@@ -1,5 +1,5 @@
 <template>
-  <div class="cv-carousel">
+  <div class="cv-carousel" @mouseenter="stopLoop" @mouseleave="beginLoop">
     <slot></slot>
   </div>
 </template>
@@ -10,7 +10,7 @@
     data () {
       return {
         items: [],
-        activeIndex: -1,
+        activeIndex: 0,
         timer: null
       }
     },
@@ -29,10 +29,22 @@
         this.items.forEach((item, index) => {
           item.translateItem(index, this.activeIndex)
         })
+      },
+      beginLoop () {
+        this.timer = setInterval(() => {
+          this.activeIndex = (this.activeIndex + 1) % this.items.length
+        }, 5000)
+      },
+      stopLoop () {
+        clearInterval(this.timer)
+        this.timer = null
       }
     },
     mounted () {
-      this.activeIndex = 0
+      this.beginLoop()
+    },
+    beforeDestroy () {
+      this.stopLoop()
     }
   }
 </script>
