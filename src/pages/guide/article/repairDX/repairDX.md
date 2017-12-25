@@ -22,7 +22,7 @@
    
 - 检测到与XXX共享软件或虚拟机冲突
 
-  ![](./image/image1.jpg)
+  ![](./image/repairDX_img1.jpg)
    
   1. 确认您没有安装使用WIFI共享软件，若有请关闭，完全卸载并重启电脑再连接网络
    
@@ -30,21 +30,21 @@
    
   3. 程序表里面有无与wifi软件相关的程序或者同一个wifi软件公司出品的插件
    
-     ![](./image/image2.png)
+     ![](./image/repairDX_img2.png)
    
   4. 服务里面有没有与wifi软件相关的服务，有请右键属性停止并且禁用
    
-     ![](./image/image3.png)
+     ![](./image/repairDX_img3.png)
       
-     ![](./image/image4.png)
+     ![](./image/repairDX_img4.png)
       
   5. 本地连接里面有无与wifi软件相关的协议，如果有，右键卸载
    
-     ![](./image/image5.png)
+     ![](./image/repairDX_img5.png)
       
   6. 设备管理器里面网络适配器看有没有与wifi软件相关的驱动，如有右键卸载
    
-     ![](./image/image6.png)
+     ![](./image/repairDX_img6.png)
       
 - 天翼客户端拨号服务异常
 
@@ -56,11 +56,11 @@
    
   4. 左键点击右下角的时间，点击时间与日期设置
    
-     ![](./image/image7.png)
+     ![](./image/repairDX_img7.png)
       
   5. 在弹出的页面中
    
-     ![](./image/image8.png)
+     ![](./image/repairDX_img8.png)
       
   6. 时间同步成功后，再次连接客户端
    
@@ -68,11 +68,11 @@
 
   1. DNS错误，按照上图IP地址错误的指引，确认是否勾选自动获取DNS地址，确认无误后。同时按下“Win键”（键盘上的微软图标键，一般在左下角Ctrl与Alt之间）+ “R键”，在弹出的窗口中输入cmd并回车
    
-     ![](./image/image9.png)
+     ![](./image/repairDX_img9.png)
    
   2. 在弹出的黑色代码窗口中输入：ipconfig /flushdns 命令，然后回车
    
-     ![](./image/image10.png)
+     ![](./image/repairDX_img10.png)
    
   3. 重启之后再次上网就可以了
    

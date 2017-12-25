@@ -2,7 +2,7 @@
   <div class="index">
     <page-header></page-header>
 
-    <announcement></announcement>
+    <announcement v-on:watchVideo="watchVideo"></announcement>
 
     <repair-nav></repair-nav>
 
@@ -42,7 +42,7 @@
     },
     data () {
       return {
-        youkuSrc: ''
+        youkuSrc: ``
       }
     },
     computed: {
@@ -52,7 +52,10 @@
     },
     methods: {
       cancel () {
-        this.youkuSrc = ''
+        this.youkuSrc = ``
+      },
+      watchVideo () {
+        this.youkuSrc = `http://player.youku.com/embed/XMTcyNzQ1NjM1Mg==`
       }
     }
   }

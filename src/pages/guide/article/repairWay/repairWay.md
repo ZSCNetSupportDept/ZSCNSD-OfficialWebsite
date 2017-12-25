@@ -2,7 +2,7 @@
 
 1. 关注下方我们的微信报修系统，点击我要报修，按照指示操作即可
 
-   ![](./image/image1.png)
+   ![](./image/repairWay_img1.png)
 
 2. 在宿舍楼下报修处填写纸质报修表
 
@@ -12,11 +12,11 @@
 
 [新浪微博](https://weibo.com/zsxyww)：
 
-![](./image/image2.png)
+![](./image/repairWay_img2.png)
 
 微信公众号：
 
-![](./image/image3.png)
+![](./image/repairWay_img3.png)
 
 [上一条：移动/联通 PPPOE 常见问题处理](/guide/repairPPPoE)
 

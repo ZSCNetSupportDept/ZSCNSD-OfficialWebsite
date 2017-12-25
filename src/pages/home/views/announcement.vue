@@ -18,7 +18,7 @@
             <h2>关于我们</h2>
             <p>网络维护科是由学院信息中心直接领导的学生组织，主要职责包括保障校内师生的正常上网，处理和协助处理校园.</p>
 
-            <button class="btn">观 看 视 频</button>
+            <button class="btn" @click="watchVideo">观 看 视 频</button>
             <a href="http://zx.zsxyww.com" target="_blank">加入我们</a>
           </div>
         </div>
@@ -36,7 +36,12 @@
       CvCarouselItem,
       CvCarousel
     },
-    name: 'announcement'
+    name: 'announcement',
+    methods: {
+      watchVideo () {
+        this.$emit('watchVideo')
+      }
+    }
   }
 </script>
 
@@ -55,6 +60,7 @@
   .announcement .btn:focus {
     color: #fff;
     background-color: #1BBC8B;
+    outline: none;
   }
 
   .cv-carousel {
