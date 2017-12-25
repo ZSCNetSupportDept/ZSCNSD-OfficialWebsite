@@ -26,6 +26,9 @@
     },
     mounted () {
       window.onscroll = throttle(this.isShow, 200, 200)
+    },
+    destroyed () {
+      window.onscroll = null
     }
   }
 </script>
