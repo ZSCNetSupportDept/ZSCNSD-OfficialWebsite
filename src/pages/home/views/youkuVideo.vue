@@ -40,6 +40,12 @@
     max-height: 660px;
   }
 
+  @media (max-width: 600px) {
+    .youku-video iframe {
+      height: 250px;
+    }
+  }
+
   .youku-video .cv-shadow {
     z-index: 1000;
   }

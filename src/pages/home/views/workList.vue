@@ -87,15 +87,22 @@
     color: #5e696a;
   }
 
-  .tabs__header ul {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: left;
+  .tabs__header li {
+    display: inline-block;
+    margin: 0 .2rem .5rem 0;
   }
 
-  .tabs__header li {
-    margin: 0 .2rem .5rem 0;
+  @supports (display: flex) or (display: -ms-flex) or (display: -webkit-flex) {
+    .tabs__header ul {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+
+    .tabs__header li {
+      display: block;
+    }
   }
 
   .tabs__content table {

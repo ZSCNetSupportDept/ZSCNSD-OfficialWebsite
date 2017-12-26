@@ -99,19 +99,25 @@
     color: #3598db;
   }
 
-  .footer-main {
-    display: grid;
-    grid-template-columns: 1.6fr 1.3fr 1fr;
+  .footer-main > div {
+    display: inline-block;
+    width: 27%;
+    vertical-align: top;
   }
 
-  @media (max-width: 768px) {
-    .footer-main {
-      grid-template-columns: 1fr;
-    }
+  .footer-main > div:first-of-type {
+    width: 40%;
+  }
 
+  @media (max-width: 767px) {
     .footer-main > div {
+      width: 100%;
       margin-bottom: .5rem;
       overflow: hidden;
+    }
+
+    .footer-main__header h2 {
+      cursor: pointer;
     }
 
     .footer-main__content {
@@ -121,6 +127,27 @@
 
     .footer-main__content--active {
       max-height: 20rem;
+    }
+  }
+
+  @supports (display: grid) {
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.6fr 1.3fr 1fr;
+    }
+
+    .footer-main > div {
+      width: auto;
+    }
+
+    .footer-main > div:first-of-type {
+      width: auto;
+    }
+
+    @media (max-width: 767px) {
+      .footer-main {
+        grid-template-columns: 1fr;
+      }
     }
   }
 </style>

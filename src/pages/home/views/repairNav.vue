@@ -70,24 +70,37 @@
     color: #5e696a;
   }
 
-  .repair-nav__content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
+  .content__item {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    padding: 0 .3rem 3rem 0;
+    text-align: center;
+    vertical-align: top;
   }
 
-  @media (max-width: 768px) {
-    .repair-nav__content {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 1rem;
+  @media (min-width: 768px) {
+    .content__item {
+      width: 25%;
     }
   }
 
-  .content__item {
-    position: relative;
-    padding-bottom: 3rem;
-    text-align: center;
+  @supports (display: grid) {
+    .repair-nav__content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+    }
+
+    .content__item {
+      width: auto;
+    }
+
+    @media (max-width: 768px) {
+      .repair-nav__content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   }
 
   .content__item .cv-iconfont {
