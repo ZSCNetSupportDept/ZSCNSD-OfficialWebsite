@@ -2,11 +2,11 @@
   <div class="footer">
     <div class="footer-main container">
       <div class="footer-main__contact">
-        <div class="footer-main__contact-header">
-          <h2>联系我们</h2>
+        <div class="footer-main__header">
+          <h2 @click="changeShow('联系我们')">联系我们</h2>
         </div>
 
-        <address class="footer-main__contact-content">
+        <address class="footer-main__content" :class="{ 'footer-main__content--active': nowOpen === '联系我们' }">
           (+86)0760-88332760<br>
           <a href="mailto:#">admin@zsxyww.com</a><br>
           微信公众号：zsxyww<br>
@@ -16,11 +16,11 @@
       </div><!-- / footer-main__contact -->
 
       <div class="footer-main__tools">
-        <div class="footer-main__tools-header">
-          <h2>便捷工具</h2>
+        <div class="footer-main__header">
+          <h2 @click="changeShow('便捷工具')">便捷工具</h2>
         </div>
 
-        <div class="footer-main__tools-content">
+        <div class="footer-main__content" :class="{ 'footer-main__content--active': nowOpen === '便捷工具' }">
           <ul>
             <li><a href="http://util.sola.love/yue.html" target="_blank">电信余额查询</a></li>
             <li><a href="http://gd.189.cn/webpay/chongzhi/czindex.jsp" target="_blank">宽带充值</a></li>
@@ -32,11 +32,11 @@
       </div><!-- / footer-main__tools -->
 
       <div class="footer-main__aboutus">
-        <div class="footer-main__aboutus-header">
-          <h2>网维百科</h2>
+        <div class="footer-main__header">
+          <h2 @click="changeShow('网维百科')">网维百科</h2>
         </div>
 
-        <div class="footer-main__aboutus-content">
+        <div class="footer-main__content" :class="{ 'footer-main__content--active': nowOpen === '网维百科' }">
           <ul>
             <li><a
                 href="http://baike.sogou.com/v63143404.htm?fromTitle=%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E4%B8%AD%E5%B1%B1%E5%AD%A6%E9%99%A2%E7%BD%91%E7%BB%9C%E7%BB%B4%E6%8A%A4%E7%A7%91"
@@ -54,7 +54,17 @@
 
 <script>
   export default {
-    name: 'PageFooter'
+    name: 'PageFooter',
+    data () {
+      return {
+        nowOpen: ''
+      }
+    },
+    methods: {
+      changeShow (open) {
+        this.nowOpen = open === this.nowOpen ? '' : open
+      }
+    }
   }
 </script>
 
@@ -92,5 +102,25 @@
   .footer-main {
     display: grid;
     grid-template-columns: 1.6fr 1.3fr 1fr;
+  }
+
+  @media (max-width: 768px) {
+    .footer-main {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-main > div {
+      margin-bottom: .5rem;
+      overflow: hidden;
+    }
+
+    .footer-main__content {
+      max-height: 0;
+      transition: max-height .6s linear;
+    }
+
+    .footer-main__content--active {
+      max-height: 20rem;
+    }
   }
 </style>

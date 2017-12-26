@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="container">
-      <nav class="header-nav">
+      <nav class="header-nav" :class="{ 'header-nav--active': openMenu }">
         <ul>
           <li class="header-nav__item">
             <router-link to="/home">首页</router-link>
@@ -38,6 +38,12 @@
         </ul>
       </nav>
 
+      <div class="header-nav-btn--phone">
+        <a @click.prevent="toggleMenu">
+          <cv-iconfont code="icon-menu"></cv-iconfont>
+        </a>
+      </div>
+
       <div class="header-logo">
         <img src="../assets/images/logo.jpg">
       </div>
@@ -47,13 +53,27 @@
 
 <script>
 
+  import CvIconfont from '../components/cv-iconfont.vue'
+
   export default {
-    name: 'PageHeader'
+    components: { CvIconfont },
+    name: 'PageHeader',
+    data () {
+      return {
+        openMenu: false
+      }
+    },
+    methods: {
+      toggleMenu () {
+        this.openMenu = !this.openMenu
+      }
+    }
   }
 </script>
 
 <style scoped>
   .header {
+    position: relative;
     height: 60px;
     border: 1px solid #e7e7e7;
   }
@@ -72,7 +92,30 @@
     position: relative;
     display: inline-block;
     padding: 10px 0;
-    z-index: 2;
+    z-index: 3;
+  }
+
+  @media (max-width: 600px) {
+    .header-nav {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      max-height: 0;
+      margin: 0;
+      overflow: hidden;
+      transition: max-height .6s linear;
+    }
+
+    .header-nav--active {
+      max-height: 70rem;
+    }
+
+    .header-nav li {
+      display: block;
+      text-align: center;
+      background-color: #fff;
+    }
   }
 
   .header-nav a {
@@ -97,6 +140,13 @@
     transition: max-height .5s ease-in;
   }
 
+  @media (max-width: 600px) {
+    .header-nav--nesting {
+      position: relative;
+      top: 10px;
+    }
+  }
+
   .header-nav li:hover .header-nav--nesting {
     max-height: 50rem;
   }
@@ -108,5 +158,23 @@
   .header-nav--nesting a {
     display: block;
     padding: 10px 0;
+  }
+
+  .header-nav-btn--phone {
+    position: relative;
+    top: 15px;
+    display: none;
+  }
+
+  .header-nav-btn--phone .cv-iconfont {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .header-nav-btn--phone {
+      display: block;
+      float: right;
+    }
   }
 </style>

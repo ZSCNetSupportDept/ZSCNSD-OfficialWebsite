@@ -18,7 +18,7 @@
             <h2>关于我们</h2>
             <p>网络维护科是由学院信息中心直接领导的学生组织，主要职责包括保障校内师生的正常上网，处理和协助处理校园.</p>
 
-            <button class="btn" @click="watchVideo">观 看 视 频</button>
+            <a class="btn" @click="watchVideo">观 看 视 频</a>
             <a href="http://zx.zsxyww.com" target="_blank">加入我们</a>
           </div>
         </div>
@@ -56,6 +56,13 @@
     font-size: 1.1rem;
   }
 
+  @media (max-width: 600px) {
+    .announcement .btn {
+      padding: 4px 10px;
+      font-size: .9rem;
+    }
+  }
+
   .announcement .btn:hover,
   .announcement .btn:focus {
     color: #fff;
@@ -68,6 +75,12 @@
     width: 100%;
     height: 550px;
     overflow: hidden;
+  }
+
+  @media (max-width: 600px) {
+    .cv-carousel {
+      height: 300px;
+    }
   }
 
   .cv-carousel-item {
@@ -97,6 +110,12 @@
     width: 50%;
   }
 
+  @media (max-width: 600px) {
+    .carousel-guide__content {
+      bottom: 3rem;
+    }
+  }
+
   @media (max-width: 992px) {
     .carousel-guide__content {
       width: 70%;
@@ -116,6 +135,17 @@
     line-height: 1.5em;
   }
 
+  @media (max-width: 600px) {
+    .carousel-guide h2 {
+      font-size: 1.6rem;
+    }
+
+    .carousel-guide p {
+      margin-bottom: .5rem;
+      font-size: .85rem;
+    }
+  }
+
   .carousel-about {
     background-image: url("../image/an_img2.png");
   }
@@ -133,10 +163,27 @@
     line-height: 1.5em;
   }
 
+  @media (max-width: 600px) {
+    .carousel-about h2 {
+      font-size: 1.6rem;
+    }
+
+    .carousel-about p {
+      margin-bottom: .5rem;
+      font-size: .85rem;
+    }
+  }
+
   .carousel-about__content {
     position: absolute;
     bottom: 5rem;
     width: 50%;
+  }
+
+  @media (max-width: 600px) {
+    .carousel-about__content {
+      bottom: 3rem;
+    }
   }
 
   @media (max-width: 992px) {
@@ -151,6 +198,16 @@
 
   .carousel-about .btn + a {
     color: #fff;
+  }
+
+  @media (max-width: 600px) {
+    .carousel-about .btn {
+      margin-right: .7rem;
+    }
+
+    .carousel-about .btn + a {
+      font-size: .85rem;
+    }
   }
 
   .carousel-about .btn + a:hover {

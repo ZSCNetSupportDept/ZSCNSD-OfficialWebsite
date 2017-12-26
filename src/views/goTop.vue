@@ -38,10 +38,9 @@
     position: fixed;
     left: 50%;
     bottom: 3rem;
-    transform: translateX(590px);
 
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2rem;
+    height: 2rem;
 
     background-color: #1ebc9d;
     opacity: .4;
@@ -61,5 +60,29 @@
     transform: translate(-55%, -50%);
 
     fill: #fff;
+  }
+
+  @media (max-width: 800px) {
+    .go-top {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .go-top {
+      transform: translateX(370px);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .go-top {
+      transform: translateX(480px);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .go-top {
+      transform: translateX(590px);
+    }
   }
 </style>

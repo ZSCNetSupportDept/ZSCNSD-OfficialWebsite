@@ -93,6 +93,7 @@
   .content__item .cv-iconfont {
     width: 43%;
     height: auto;
+    margin-bottom: .5rem;
     fill: #606a6c;
   }
 

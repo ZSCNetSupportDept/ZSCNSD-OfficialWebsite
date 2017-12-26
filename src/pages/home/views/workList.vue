@@ -37,7 +37,7 @@
             </tbody>
           </table>
 
-          <p>*投诉电话：<span v-for="tousu in data.tousu">{{ `${tousu.worker} -- ${tousu.phone} `}}</span></p>
+          <p>*投诉电话：<span v-for="tousu in data.tousu">{{ `${tousu.worker} -- ${tousu.phone} `}}<br></span></p>
         </div>
       </div>
     </div>
@@ -87,17 +87,22 @@
     color: #5e696a;
   }
 
+  .tabs__header ul {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
   .tabs__header li {
-    display: inline-block;
-    margin: 0 .5rem 1rem 0;
+    margin: 0 .2rem .5rem 0;
   }
 
   .tabs__content table {
-    width: 100%;
+    min-width: 100%;
     margin-bottom: .5rem;
     text-align: left;
     font-size: 1rem;
-    overflow-x: scroll;
   }
 
   th {
@@ -115,5 +120,12 @@
 
   .tabs__content > p {
     text-align: right;
+    line-height: 1.2em;
+  }
+
+  @media (min-width: 768px) {
+    .tabs__content br {
+      display: none;
+    }
   }
 </style>
