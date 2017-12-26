@@ -1,8 +1,12 @@
 /**
- * Created by Clovin on 20/12/2017.
+ * Created by Clovin on 26/12/2017.
  */
+
 import axios from 'axios'
+import {getDomain} from 'create-api'
+
+const domain = getDomain()
 
 export function fetchWorkList () {
-  return axios.get('http://localhost:8080/workList').then(res => res.data)
+  return axios.get(domain + '/workList').then(res => res.data)
 }

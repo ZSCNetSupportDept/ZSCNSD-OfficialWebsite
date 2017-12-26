@@ -41,7 +41,7 @@
       store.registerModule('workList', workListModule)
       return store.dispatch('workList/FETCH_WORK_LIST')
     },
-    destroyed () {
+    beforeDestroy () {
       this.$store.unregisterModule('workList')
     },
     title () {

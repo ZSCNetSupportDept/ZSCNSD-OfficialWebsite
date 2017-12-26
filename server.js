@@ -114,7 +114,7 @@ function render (req, res) {
 }
 
 const workListModel = require('./models/workList/workList')
-workListModel.start(`/Users/wenxiaoxin/Desktop/ZSCNSD-OfficialWebsite/models/workList/sheets/sheet.xlsx`)
+workListModel.start(`./models/workList/sheets/sheet.xlsx`)
 app.get(`/workList`, (req, res) => {
   res.send(workListModel.getWorkList())
 })
@@ -123,7 +123,7 @@ app.get('*', isProd ? render : (req, res) => {
   readyPromise.then(() => render(req, res))
 })
 
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 9593
 app.listen(port, () => {
   console.log(`server started at localhost:${port}`)
 })

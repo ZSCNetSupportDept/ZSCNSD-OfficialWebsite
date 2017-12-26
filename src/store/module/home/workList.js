@@ -2,7 +2,7 @@
  * Created by Clovin on 21/12/2017.
  */
 
-import {fetchWorkList} from '../../../api'
+import {fetchWorkList} from '../../../api/index'
 
 export default {
   namespaced: true,

@@ -6,7 +6,7 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const homePage = () => import('../pages//home/home.vue')
+const homePage = () => import('../pages/home/home.vue')
 
 const guidePage = () => import('../pages/guide/guide.vue')
 const guideForeword = () => import('../pages/guide/article/foreword/foreword.md')
