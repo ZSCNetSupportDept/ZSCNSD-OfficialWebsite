@@ -22,7 +22,7 @@
 
         <div class="footer-main__content" :class="{ 'footer-main__content--active': nowOpen === '便捷工具' }">
           <ul>
-            <li><a href="http://util.sola.love/yue.html" target="_blank">电信余额查询</a></li>
+            <li><a href="http://yue.zsxyww.toserver.cn" target="_blank">电信余额查询</a></li>
             <li><a href="http://gd.189.cn/webpay/chongzhi/czindex.jsp" target="_blank">宽带充值</a></li>
             <li><a href="http://www2.zsc.edu.cn/xxzx" target="_blank">信息中心官方网址</a></li>
             <li><a href="http://jwgl.zsc.edu.cn:90/" target="_blank">学院教务管理</a></li>
