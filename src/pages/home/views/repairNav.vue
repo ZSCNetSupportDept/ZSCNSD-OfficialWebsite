@@ -76,6 +76,14 @@
     grid-gap: 1rem;
   }
 
+  @media (max-width: 768px) {
+    .repair-nav__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+    }
+  }
+
   .content__item {
     position: relative;
     padding-bottom: 3rem;
@@ -105,5 +113,7 @@
     bottom: 1rem;
     display: inline-block;
     transform: translateX(-50%);
+
+    white-space: nowrap;
   }
 </style>

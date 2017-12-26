@@ -97,6 +97,12 @@
     width: 50%;
   }
 
+  @media (max-width: 992px) {
+    .carousel-guide__content {
+      width: 70%;
+    }
+  }
+
   .carousel-guide h2 {
     margin-bottom: .5rem;
     font-size: 3rem;
@@ -131,6 +137,12 @@
     position: absolute;
     bottom: 5rem;
     width: 50%;
+  }
+
+  @media (max-width: 992px) {
+    .carousel-about__content {
+      width: 70%;
+    }
   }
 
   .carousel-about .btn {
