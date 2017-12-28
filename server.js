@@ -122,11 +122,15 @@ app.get(`/not-support`, (req, res) => {
   res.sendFile(path.join(__dirname, '/views/not-support/not-support.html'))
 })
 
+app.get(`/baidu-verify-BB57E0BF13.txt`, (req, res) => {
+  res.sendFile(path.join(__dirname, '/public/baidu-verify-BB57E0BF13.txt'))
+})
+
 app.get('*', isProd ? render : (req, res) => {
   readyPromise.then(() => render(req, res))
 })
 
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 9594
 app.listen(port, () => {
   console.log(`server started at localhost:${port}`)
 })
