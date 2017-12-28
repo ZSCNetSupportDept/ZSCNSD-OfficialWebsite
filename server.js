@@ -1,6 +1,5 @@
 const fs = require('fs')
 const path = require('path')
-const util = require('util')
 const LRU = require('lru-cache')
 const express = require('express')
 const favicon = require('serve-favicon')
@@ -65,7 +64,7 @@ const serve = (path, cache) => express.static(resolve(path), {
 })
 
 app.use(compression({ threshold: 0 }))
-app.use(favicon('./public/logo-48.png'))
+app.use(favicon('./public/images/logo/logo-48.png'))
 app.use('/dist', serve('./dist', true))
 app.use('/public', serve('./public', true))
 app.use('/manifest.json', serve('./manifest.json', true))
@@ -99,7 +98,7 @@ function render (req, res) {
   }
 
   const context = {
-    title: 'Vue HN 2.0', // default title
+    title: '中山学院网维维护科', // default title
     url: req.url
   }
   renderer.renderToString(context, (err, html) => {
@@ -119,11 +118,15 @@ app.get(`/workList`, (req, res) => {
   res.send(workListModel.getWorkList())
 })
 
+app.get(`/not-support`, (req, res) => {
+  res.sendFile(path.join(__dirname, '/views/not-support/not-support.html'))
+})
+
 app.get('*', isProd ? render : (req, res) => {
   readyPromise.then(() => render(req, res))
 })
 
-const port = process.env.PORT || 9594
+const port = process.env.PORT || 8080
 app.listen(port, () => {
   console.log(`server started at localhost:${port}`)
 })
