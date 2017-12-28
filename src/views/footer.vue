@@ -48,7 +48,7 @@
       </div><!-- / footer-main__aboutus -->
     </div><!-- / footer-main -->
 
-    <p>Copyright © 2017 中山学院网络维护科</p>
+    <p>Copyright © 2017 电子科技大学中山学院网络维护科</p>
   </div>
 </template>
 

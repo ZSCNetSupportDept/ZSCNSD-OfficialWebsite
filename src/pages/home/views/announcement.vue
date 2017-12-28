@@ -5,7 +5,7 @@
         <div class="container">
           <div class="carousel-guide__content">
             <h2>中山学院<br>校园网络指引</h2>
-            <p>此文档旨在帮助中山学院的学子了解如何设置上网、电信新客户端的一些新功能、常见问题的处理及网络故障的报修方式.</p>
+            <p>此文档旨在帮助电子科技大学中山学院的学子了解如何设置上网、电信新客户端的一些新功能、常见问题的处理及网络故障的报修方式.</p>
 
             <router-link to="/guide/foreword" class="btn">点 击 查 看</router-link>
           </div>
