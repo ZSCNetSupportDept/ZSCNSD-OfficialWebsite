@@ -132,6 +132,10 @@ export function createRouter () {
           {
             path: 'paper',
             component: repairGuidePaper
+          },
+          {
+            path: '*',
+            component: repairGuideWechat
           }
         ]
       },
