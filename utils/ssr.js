@@ -1,4 +1,6 @@
 /**
+ * use for Vue.js SSR. See the Vue.js SSR docs for help
+ *
  * Created by Clovin on 04/01/2018.
  */
 let app = require('express')()

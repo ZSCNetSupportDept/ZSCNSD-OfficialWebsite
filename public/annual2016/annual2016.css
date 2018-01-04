@@ -1,0 +1,2343 @@
+* {
+  box-sizing: border-box;
+}
+
+/*html{*/
+/*font-size:19px;*/
+/*}*/
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  font-family: "Microsoft JhengHei", sans-serif;
+  color: #fff;
+
+  background-color: #1e1e1e;
+}
+
+p {
+  position: relative;
+  margin: 0;
+  margin-top: 20px;
+  /*font-size: 1rem;*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+  margin: 0;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 29px;
+  /*font-size: 1.4rem;*/
+}
+
+h6 {
+  font-size: 13px;
+  /*font-size: .9rem;*/
+}
+
+.hide {
+  display: none;
+}
+
+.page {
+  position: absolute;
+
+  opacity: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #1e1e1e;
+}
+
+/*   对word类的初始设置   */
+.page .word {
+  padding: 20px 15px 0 20px;
+}
+
+@media (min-width: 370px) {
+  .page .word {
+    padding: 10px 15px 0 20px;
+  }
+}
+
+/*  middle-img的实现   */
+.middle-img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.middle-img img {
+  width: 100%;
+}
+
+/*  top-img和bottom-img的实现   */
+.top-img img {
+  width: 100%;
+  max-height: 590px;
+}
+
+.bottom-img {
+  position: absolute;
+  bottom: 0;
+}
+
+.bottom-img img {
+  width: 100%;
+  max-height: 500px;
+}
+
+@media (max-height: 620px) {
+  .top-img img {
+    max-height: 300px;
+  }
+
+  .bottom-img img {
+    max-height: 300px;
+  }
+}
+
+/*  inline的p的实现  */
+.inline-p {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.inline-p p {
+  display: inline-block;
+}
+
+.inline-p p:first-child {
+  float: left;
+
+  width: 70px;
+  margin: 0;
+
+  font-size: 30px;
+}
+
+.inline-p p:last-child {
+  width: 68%;
+}
+
+/*  对页面的page类及里面的img进行一些的设置  */
+#body .page {
+  z-index: 0;
+  animation-play-state: paused;
+  opacity: 0;
+}
+
+#body .page img {
+  opacity: 0;
+}
+
+#body .page[class~='active'] img {
+  opacity: 1;
+}
+
+/*  三个tip的样式  */
+#tip {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  display: none;
+
+  text-align: center;
+
+  transform: translate(-50%, -50%);
+  z-index: 9997;
+}
+
+#tip1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  display: none;
+
+  text-align: center;
+
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+}
+
+#tip2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  display: none;
+  height: 100%;
+  width: 100%;
+  padding-top: 50%;
+
+  text-align: center;
+
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+@keyframes title {
+  0% {
+    opacity: 0;
+  }
+
+  48% {
+    opacity: 0;
+  }
+
+  52% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bg {
+  0% {
+    background-color: #306f99;
+  }
+
+  50% {
+    background-color: #19470f;
+  }
+
+  90% {
+    background-color: #734a10;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  55% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.body {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  font-family: arial;
+  background: black;
+  color: #eaf7ff;
+  z-index: 999;
+}
+
+#1 {
+  z-index: -1;
+}
+
+.wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -450px;
+  margin-top: -250px;
+}
+
+.bg {
+  padding: 200px 200px 200px 0;
+  background: #306f99;
+  animation: bg 1.5s linear infinite;
+  box-shadow: inset 0 0 225px 150px black;
+}
+
+/*  loading样式   */
+.loading {
+  position: relative;
+  text-align: right;
+  text-shadow: 0 0 30px #bce4ff;
+  height: 100px;
+  width: 750px;
+  font-size: 25px;
+}
+
+.loading h1 {
+  display: block;
+  text-transform: uppercase;
+  position: absolute;
+  width: 1000px;
+  line-height: 100px;
+  top: 0px;
+  right: 190px;
+}
+
+.loading h1:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 28px;
+  right: -30px;
+  height: 40px;
+  width: 20px;
+  background: #eaf7ff;
+  box-shadow: 0 0 75px #bce4ff;
+  animation: blink 3.4s infinite;
+}
+
+.loading h1.title {
+  animation: title 3.4s linear infinite;
+}
+
+.loading h1.text {
+  animation: title 3.4s linear 1.7s infinite;
+  opacity: 0;
+}
+
+/*  console样式   */
+#console {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+
+  display: none;
+  height: 25px;
+  width: 30px;
+
+  z-index: 998;
+  opacity: .8;
+}
+
+/*  更改console的button样式，使其好看，解决了在ios里的一些问题 */
+#console button {
+  padding: 0 !important;
+
+  border-width: 0 !important;
+  border-radius: 1px !important;
+
+  opacity: .5;
+}
+
+#console img {
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+}
+
+#page1 {
+  text-align: center;
+}
+
+#page1 .word {
+  position: relative;
+  top: 10px;
+}
+
+#page1 p {
+  letter-spacing: .5em;
+}
+
+/*  page1的动画效果   */
+#page1 {
+  animation: page1 6s linear;
+  animation-fill-mode: forwards;
+}
+
+#page1 p {
+  opacity: 0;
+  transition: opacity 2s ease 2.5s;
+}
+
+#page1 h2 {
+  opacity: 0;
+  transition: opacity 2s ease 1s;
+}
+
+#page1[class~='active'] {
+  z-index: 1;
+}
+
+#page1[class~='active'] h2 {
+  opacity: 1;
+}
+
+#page1[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page2 .word {
+  letter-spacing: .3em;
+  line-height: 1.8em;
+}
+
+#page2 .right {
+  margin-top: 60px;
+
+  text-align: right;
+  font-size: 9px;
+}
+
+@media (max-height: 483px) {
+  #page2 .right {
+    margin-top: 10px;
+  }
+}
+
+/*   page2的动画效果  */
+#page2 {
+  animation: page2 7s linear;
+  animation-fill-mode: forwards;
+}
+
+#page2 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 2.5s;
+}
+
+#page2 p:last-child {
+  transition: opacity 1.5s ease 4s;
+}
+
+#page2 h2 {
+  opacity: 0;
+  transition: opacity 1.5s ease 1s;
+}
+
+#page2[class~='active'] {
+  z-index: 1;
+}
+
+#page2[class~='active'] h2 {
+  opacity: 1;
+}
+
+#page2[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page2 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page3 .word {
+  letter-spacing: .3em;
+}
+
+#page3 .word > p:first-child {
+  margin-bottom: 50px;
+}
+
+@media (max-height: 480px) {
+  #page3 .word > p:first-child {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+#page3 .word p span:first-child {
+  font-size: 30px;
+  letter-spacing: .4em;
+}
+
+/*   page3的动画效果  */
+#page3 {
+  animation: page3 11s linear;
+  animation-fill-mode: forwards;
+}
+
+#page3 p {
+  opacity: 0;
+  transition: opacity 2s ease 1s;
+}
+
+#page3 .inline-p {
+  opacity: 1;
+  transition: opacity 1.5s ease 9s;
+}
+
+#page3 .inline-p:nth-child(2) p {
+  transition: opacity 1.5s ease 2s;
+}
+
+#page3 .inline-p:nth-child(2) p:last-child {
+  transition: opacity 1.5s ease 3.5s;
+}
+
+#page3 .inline-p:last-child p {
+  transition: opacity 1.5s ease 5s;
+}
+
+#page3 .inline-p:last-child p:last-child {
+  transition: opacity 1.5s ease 6.5s;
+}
+
+#page3[class~='active'] {
+  z-index: 1;
+}
+
+#page3[class~='active'] p {
+  opacity: 1;
+}
+
+#page3[class~='active'] .inline-p {
+  opacity: 0;
+}
+
+@keyframes page3 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page4 .word {
+  padding-right: 30px;
+
+  letter-spacing: .3em;
+}
+
+#page4 .word > p:first-child {
+  margin-bottom: 50px;
+  margin-left: 0;
+}
+
+#page4 .word p:first-child {
+  opacity: 1;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+@media (max-height: 480px) {
+  #page4 .word > p:first-child {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+#page4 h6 {
+  margin-bottom: 5px;
+}
+
+#page4 p {
+  margin-top: 0;
+  margin-left: 33px;
+  margin-bottom: 10px;
+}
+
+#page4 span {
+  font-size: 1.4em;
+}
+
+/*   page4的动画效果   */
+#page4 {
+  animation: page4 9s linear;
+  animation-fill-mode: forwards;
+}
+
+#page4 .word p {
+  opacity: 0;
+  transition: opacity 1.5s ease 2.5s;
+}
+
+#page4 .word p:last-child {
+  transition: opacity 1.5s ease 5.5s;
+}
+
+#page4 .word h6 {
+  opacity: 0;
+}
+
+#page4 .word h6:nth-child(2) {
+  transition: opacity 1.5s ease 1s;
+}
+
+#page4 .word h6:nth-child(4) {
+  transition: opacity 1.5s ease 4s;
+}
+
+#page4[class~='active'] {
+  z-index: 1;
+}
+
+#page4[class~='active'] h6 {
+  opacity: 1;
+}
+
+#page4[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page4 {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page5 .word {
+  padding-right: 30px;
+
+  letter-spacing: .3em;
+}
+
+#page5 p:first-child {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+@media (max-height: 480px) {
+  #page5 .word > p:first-child {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+#page5 p {
+  margin-bottom: 40px;
+}
+
+#page5 p:last-child {
+  margin-bottom: 0;
+  margin-left: 40px;
+}
+
+#page5 p span {
+  font-size: 1.7em;
+}
+
+/*   page5的动画效果   */
+#page5 {
+  animation: page5 5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page5 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 1s;
+}
+
+#page5 p:first-child {
+  opacity: 1;
+}
+
+#page5 p:last-child {
+  transition: opacity 1.5s ease 2.5s;
+}
+
+#page5[class~='active'] {
+  z-index: 1;
+}
+
+#page5[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page5 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page6 h2 {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+#page6 .word p:last-child {
+  margin-top: 40px;
+}
+
+@media (max-height: 480px) {
+  #page6 h2 {
+    margin-bottom: 19px;
+  }
+
+  #page6 .word p {
+    margin-top: 10px;
+  }
+}
+
+/*  page6的动画效果   */
+#page6 {
+  animation: page6 7s linear;
+  animation-fill-mode: forwards;
+}
+
+#page6 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 3s;
+}
+
+#page6 p:last-child {
+  transition: opacity 1.5s ease 4.5s;
+}
+
+#page6 h2 {
+  opacity: 0;
+  transition: opacity 1.5s ease 1.5s;
+}
+
+#page6[class~='active'] {
+  z-index: 1;
+}
+
+#page6[class~='active'] h2 {
+  opacity: 1;
+}
+
+#page6[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page6 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page7 .top-img {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+#page7 img {
+  position: relative;
+  z-index: -1;
+}
+
+#page7 .word {
+  position: absolute;
+  bottom: 75px;
+}
+
+#page7 p {
+  margin-top: 7px;
+}
+
+/*   page7的动画效果   */
+#page7 {
+  animation: page7 6.5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page7 p {
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 2s ease 2s, bottom 1s linear 2s;
+}
+
+#page7[class~='active'] {
+  z-index: 1;
+}
+
+#page7[class~='active'] p {
+  opacity: 1;
+  bottom: 35px;
+}
+
+@keyframes page7 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page8 .word {
+  position: absolute;
+  top: 0;
+}
+
+#page8 .word p {
+  margin-left: 80px;
+  margin-top: 30px;
+  letter-spacing: .5em;
+}
+
+#page8 .word p:first-child {
+  margin-left: 50px;
+}
+
+#page8 .word p:last-child {
+  margin-left: 120px;
+}
+
+/*   page8的动画效果   */
+#page8 {
+  animation: page8 5.5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page8 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 2s;
+}
+
+#page8[class~='active'] {
+  z-index: 1;
+}
+
+#page8[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page8 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page9 .word {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  min-height: 50%;
+  padding: 0;
+  padding-bottom: 50px;
+  text-align: center;
+
+  background: rgba(0, 0, 0, .5);
+}
+
+#page9 .word p {
+  display: inline-block;
+
+  line-height: 3.5em;
+  letter-spacing: .4em;
+  vertical-align: top;
+
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+}
+
+@media (max-width: 306px) {
+  #page9 .word p {
+    line-height: 2em;
+    letter-spacing: .2em;
+  }
+}
+
+/*    page9的动画效果   */
+#page9 {
+  animation: page9 12s linear;
+  animation-fill-mode: forwards;
+}
+
+#page9 p {
+  opacity: 0;
+}
+
+#page9 p:nth-last-child(1) {
+  transition: opacity 1s ease 2s;
+}
+
+#page9 p:nth-last-child(2) {
+  transition: opacity 2s ease 2.5s;
+}
+
+#page9 p:nth-last-child(3) {
+  transition: opacity 2s ease 3.5s;
+}
+
+#page9 p:nth-last-child(4) {
+  transition: opacity 2s ease 5.5s;
+}
+
+#page9 p:nth-last-child(5) {
+  transition: opacity 2s ease 7.5s;
+}
+
+#page9[class~='active'] {
+  z-index: 1;
+}
+
+#page9[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page9 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page10 .word {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  min-height: 50%;
+  padding: 0;
+  padding-bottom: 50px;
+  text-align: center;
+
+  background: rgba(0, 0, 0, .5);
+}
+
+#page10 .word p {
+  display: inline-block;
+
+  line-height: 3.5em;
+  letter-spacing: .4em;
+  vertical-align: top;
+
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+}
+
+/*   page10的动画效果   */
+#page10 {
+  animation: page10 5.5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page10 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 1s;
+}
+
+#page10 p:last-child {
+  transition: opacity 1.5s ease 2s;
+}
+
+#page10[class~='active'] {
+  z-index: 1;
+}
+
+#page10[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page10 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page11 .word {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  min-height: 50%;
+  padding: 0;
+  padding-bottom: 50px;
+  text-align: center;
+
+  background: rgba(0, 0, 0, .5);
+}
+
+#page11 .word p {
+  display: inline-block;
+
+  line-height: 3.5em;
+  letter-spacing: .4em;
+  vertical-align: top;
+
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+}
+
+/*   page11的动画效果   */
+#page11 {
+  animation: page11 6s linear;
+  animation-fill-mode: forwards;
+}
+
+#page11 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 1.5s;
+}
+
+#page11[class~='active'] {
+  z-index: 1;
+}
+
+#page11[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page11 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page12 .word {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+#page12 .word p {
+  display: inline-block;
+
+  line-height: 3.5em;
+  letter-spacing: .4em;
+  vertical-align: top;
+
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+}
+
+/*   page12的动画效果   */
+#page12 {
+  animation: page12 7.5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page12 p {
+  opacity: 0;
+  transition: opacity 2s ease 2.7s;
+}
+
+#page12 p:last-child {
+  transition: opacity 2s ease 1s;
+}
+
+#page12[class~='active'] {
+  z-index: 1;
+}
+
+#page12[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page12 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page13 .word {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+#page13 .word p {
+  display: inline-block;
+
+  line-height: 3.5em;
+  letter-spacing: .4em;
+  vertical-align: top;
+
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+}
+
+/*   page13的动画效果   */
+#page13 {
+  animation: page13 7s linear;
+  animation-fill-mode: forwards;
+}
+
+#page13 p {
+  opacity: 0;
+  transition: opacity 1s ease 2.3s;
+}
+
+#page13 p:first-child {
+  transition: opacity 1s ease 3.3s;
+}
+
+#page13 p:last-child {
+  transition: opacity 1s ease 1.5s;
+}
+
+#page13[class~='active'] {
+  z-index: 1;
+}
+
+#page13[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page13 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page14 {
+  background: #000;
+}
+
+#page14 .word {
+  width: 100%;
+  padding: 0;
+
+  text-align: center;
+
+  background: rgb(0, 0, 0);
+}
+
+#page14 .word p {
+  display: inline-block;
+
+  line-height: 3.5em;
+  letter-spacing: .4em;
+  vertical-align: top;
+
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+}
+
+/*   page14的动画效果  */
+#page14 {
+  animation: page14 9s linear;
+  animation-fill-mode: forwards;
+}
+
+#page14 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 6s;
+}
+
+#page14 p:nth-child(2) {
+  transition: opacity 1.5s ease 4.5s;
+}
+
+#page14 p:nth-child(3) {
+  transition: opacity 1.5s ease 3s;
+}
+
+#page14 p:nth-child(4) {
+  transition: opacity 1.5s ease 1.5s;
+}
+
+#page14[class~='active'] {
+  z-index: 1;
+}
+
+#page14[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page14 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page15 p {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+/*   page15的动画效果  */
+#page15 {
+  animation: page15 10.5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page15 {
+  transition: opacity 2s ease 11s, top 2s ease;
+}
+
+#page15 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 1.5s;
+}
+
+#page15 p:nth-child(2) {
+  transition: opacity 1.5s ease 3s;
+}
+
+#page15 p:nth-child(3) {
+  transition: opacity 1.5s ease 4.5s;
+}
+
+#page15 p:nth-child(4) {
+  transition: opacity 1.5s ease 6s;
+}
+
+#page15[class~='active'] {
+  z-index: 1;
+}
+
+#page15[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page15 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page16 p {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+/*    page16的动画效果   */
+#page16 {
+  animation: page16 8.5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page16 p {
+  opacity: 0;
+  transition: opacity 2s ease 4s;
+}
+
+#page16 p:first-child {
+  transition: opacity 2s ease 2s;
+}
+
+#page16 p:last-child {
+  transition: opacity 2s ease 5s;
+}
+
+#page16[class~='active'] {
+  z-index: 1;
+}
+
+#page16[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page16 {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page17 p {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+/*   page17的动画效果   */
+#page17 {
+  animation: page17 6.5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page17 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 1.5s;
+}
+
+#page17 p:last-child {
+  transition: opacity 1.5s ease 3s;
+}
+
+#page17[class~='active'] {
+  z-index: 1;
+}
+
+#page17[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page17 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  /*95%{*/
+  /*top:0;*/
+  /*}*/
+  100% {
+    opacity: 1;
+    /*top:-100%;*/
+  }
+}
+
+#page18 p {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+/*   page18的动画效果  */
+#page18 {
+  animation: page18 6.5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page18 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 1.5s;
+}
+
+#page18 p:last-child {
+  transition: opacity 1.5s ease 3s;
+}
+
+#page18[class~='active'] {
+  z-index: 1;
+}
+
+#page18[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page18 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page19 p {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+/*    page19的动画效果*/
+#page19 {
+  animation: page19 5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page19 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 1.5s;
+}
+
+#page19[class~='active'] {
+  z-index: 1;
+}
+
+#page19[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page19 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page20 .word {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  padding: 5% 15% 10% 15%;
+
+  color: #fff;
+  letter-spacing: .5em;
+
+  background: rgba(0, 0, 0, .5);
+}
+
+/*   page20的动画效果    */
+#page20 {
+  animation: page20 7s linear;
+  animation-fill-mode: forwards;
+}
+
+#page20 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 2s;
+}
+
+#page20 p:last-child {
+  transition: opacity 1.5s ease 3.5s;
+}
+
+#page20[class~='active'] {
+  z-index: 1;
+}
+
+#page20[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page20 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page21 .photo-group {
+  width: 90%;
+  margin: 70px auto 0 auto;
+}
+
+#page21 img {
+  display: inline-block;
+  width: 49%;
+}
+
+/*    page21的动画效果    */
+#page21 {
+  animation: page21 6.5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page21 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 1.5s;
+}
+
+#page21 p:last-child {
+  transition: opacity 1.5s ease 3s;
+}
+
+#page21[class~='active'] {
+  z-index: 1;
+}
+
+#page21[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page21 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page22 p {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+@media (max-height: 480px) {
+  #page22 p {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+}
+
+/*    page22的动画效果   */
+#page22 {
+  animation: page22 7.5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page22 p {
+  opacity: 0;
+  transition: opacity 1s ease 1.5s;
+}
+
+#page22 p:nth-child(2) {
+  transition: opacity 1s ease 2.5s;
+}
+
+#page22 p:nth-child(3) {
+  transition: opacity 1s ease 3.5s;
+}
+
+#page22 p:nth-child(4) {
+  transition: opacity 1s ease 4.5s;
+}
+
+#page22[class~='active'] {
+  z-index: 1;
+}
+
+#page22[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page22 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page23 p {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+/*   page23的动画效果   */
+#page23 {
+  animation: page23 8s linear;
+  animation-fill-mode: forwards;
+}
+
+#page23 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 3s;
+}
+
+#page23 p:first-child {
+  transition: opacity 1.5s ease 1.5s;
+}
+
+#page23 p:last-child {
+  transition: opacity 1.5s ease 4.5s;
+}
+
+#page23[class~='active'] {
+  z-index: 1;
+}
+
+#page23[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page23 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page24 p {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+@media (max-height: 480px) {
+  #page24 p {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+}
+
+/*    page24的动画效果   */
+#page24 {
+  animation: page24 9.5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page24 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 1.5s;
+}
+
+#page24 p:nth-child(2) {
+  transition: opacity 1.5s ease 3s;
+}
+
+#page24 p:nth-child(3) {
+  transition: opacity 1.5s ease 4.5s;
+}
+
+#page24 p:nth-child(4) {
+  transition: opacity 1.5s ease 6s;
+}
+
+#page24[class~='active'] {
+  z-index: 1;
+}
+
+#page24[class~='active'] h2 {
+  opacity: 1;
+}
+
+#page24[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page24 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page25 .word {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+
+  transform: translate(-50%, -50%);
+}
+
+#page25 h2 {
+  margin-left: 20px;
+}
+
+#page25 p {
+  margin: 0;
+  margin-right: 50px;
+
+  text-align: right;
+}
+
+/*   page25的动画效果    */
+#page25 {
+  animation: page25 4.5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page25 h2 {
+  opacity: 0;
+  transition: opacity 1s ease 2s;
+}
+
+#page25 p {
+  opacity: 0;
+  transition: opacity 1s ease 3s;
+}
+
+#page25[class~='active'] {
+  z-index: 1;
+}
+
+#page25[class~='active'] h2 {
+  opacity: 1;
+}
+
+#page25[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page25 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page26 .word {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+
+  transform: translate(-50%, -50%);
+}
+
+#page26 h2 {
+  margin-left: 20px;
+}
+
+#page26 p {
+  margin: 0;
+  margin-right: 50px;
+
+  text-align: right;
+}
+
+/*    page26的动画效果   */
+#page26 {
+  animation: page26 4s linear;
+  animation-fill-mode: forwards;
+}
+
+#page26 h2 {
+  opacity: 0;
+  transition: opacity 1s ease 1s;
+}
+
+#page26 p {
+  opacity: 0;
+  transition: opacity 1s ease 2s;
+}
+
+#page26[class~='active'] {
+  z-index: 1;
+}
+
+#page26[class~='active'] h2 {
+  opacity: 1;
+}
+
+#page26[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page26 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page27 .word {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+
+  transform: translate(-50%, -50%);
+}
+
+#page27 p {
+  margin-right: 50px;
+
+  text-align: right;
+}
+
+/*    page27的动画效果   */
+#page27 {
+  animation: page27 4s linear;
+  animation-fill-mode: forwards;
+}
+
+#page27 p {
+  opacity: 0;
+  transition: opacity 1s ease 2s;
+}
+
+#page27[class~='active'] {
+  z-index: 1;
+}
+
+#page27[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page27 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page28 .word {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+
+  transform: translate(-50%, -50%);
+}
+
+#page28 p {
+  margin-right: 50px;
+
+  text-align: right;
+}
+
+/*    page28的动画效果    */
+#page28 {
+  animation: page28 4s linear;
+  animation-fill-mode: forwards;
+}
+
+#page28 p {
+  opacity: 0;
+  transition: opacity 1s ease 2s;
+}
+
+#page28[class~='active'] {
+  z-index: 1;
+}
+
+#page28[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page28 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page29 .word {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+
+  transform: translate(-50%, -50%);
+}
+
+#page29 p {
+  margin-right: 50px;
+  text-align: right;
+}
+
+/*   page29的动画效果    */
+#page29 {
+  animation: page29 4s linear;
+  animation-fill-mode: forwards;
+}
+
+#page29 p {
+  opacity: 0;
+  transition: opacity 1s ease 2s;
+}
+
+#page29[class~='active'] {
+  z-index: 1;
+}
+
+#page29[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page29 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page30 .word {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+
+  transform: translate(-50%, -50%);
+}
+
+#page30 p {
+  margin-top: 0;
+  margin-left: 80px;
+}
+
+#page30 p:first-child {
+  margin-left: 20px;
+}
+
+#page30 p:last-child {
+  margin-left: 130px;
+}
+
+/*  page30的动画效果   */
+#page30 {
+  animation: page30 8s linear;
+  animation-fill-mode: forwards;
+}
+
+#page30 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 3.5s;
+}
+
+#page30 p:first-child {
+  transition: opacity 1.5s ease 2s;
+}
+
+#page30 p:last-child {
+  transition: opacity 1.5s ease 5s;
+}
+
+#page30[class~='active'] {
+  z-index: 1;
+}
+
+#page30[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page30 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page31 .word {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+
+  transform: translate(-50%, -50%);
+}
+
+#page31 p {
+  margin-top: 0;
+
+  text-align: right;
+}
+
+#page31 p:first-child {
+  margin-top: 25px;
+}
+
+/*   page31的动画效果   */
+#page31 {
+  animation: page31 7.5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page31 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 2s;
+}
+
+#page31 p:last-child {
+  transition: opacity 1.5s ease 3.5s;
+}
+
+#page31[class~='active'] {
+  z-index: 1;
+}
+
+#page31[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page31 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page32 .word {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  padding: 5% 15% 10% 15%;
+
+  color: #fff;
+  letter-spacing: .5em;
+
+  background: rgba(0, 0, 0, .5);
+}
+
+#page32 p:first-child {
+  margin-bottom: 30px;
+}
+
+#page32 p {
+  margin-top: .4em;
+}
+
+#page32 p:last-child {
+  margin-bottom: 20px;
+}
+
+/*     page32的动画效果    */
+#page32 {
+  animation: page32 8.5s linear;
+  animation-fill-mode: forwards;
+}
+
+#page32 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 4s;
+}
+
+#page32 p:first-child {
+  transition: opacity 2s ease 1.5s;
+}
+
+#page32 p:last-child {
+  transition: opacity 1.5s ease 5.5s;
+}
+
+#page32[class~='active'] {
+  z-index: 1;
+}
+
+#page32[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page32 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page33 .word {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  padding: 5% 4% 10% 4%;
+
+  color: #fff;
+  letter-spacing: .5em;
+
+  background: rgba(0, 0, 0, .5);
+}
+
+/*    page33的动画效果    */
+#page33 {
+  animation: page33 16s linear;
+  animation-fill-mode: forwards;
+}
+
+#page33 p {
+  opacity: 0;
+  transition: opacity 1.5s ease 2s;
+}
+
+#page33 p:nth-child(2) {
+  transition: opacity 2s ease 4s;
+}
+
+#page33 p:nth-child(3) {
+  transition: opacity 2s ease 6s;
+}
+
+#page33 p:nth-child(4) {
+  transition: opacity 2s ease 8s;
+}
+
+#page33 p:nth-child(5) {
+  transition: opacity 2s ease 10s;
+}
+
+#page33[class~='active'] {
+  z-index: 1;
+}
+
+#page33[class~='active'] p {
+  opacity: 1;
+}
+
+@keyframes page33 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page34 .word {
+  position: absolute;
+  bottom: 20px;
+
+  width: 100%;
+
+  letter-spacing: 1em;
+  text-align: center;
+}
+
+/*    page34的动画效果   */
+#page34 {
+  animation: page34 7s linear;
+  animation-fill-mode: forwards;
+}
+
+#page34 img {
+  opacity: 0;
+  transition: opacity 2s ease 1s;
+}
+
+#page34 p {
+  opacity: 0;
+  transition: opacity 2s ease 2.5s;
+}
+
+#page34[class~='active'] {
+  z-index: 1;
+}
+
+#page34[class~='active'] p {
+  opacity: 1;
+}
+
+#page34[class~='active'] img {
+  opacity: 1;
+}
+
+@keyframes page34 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

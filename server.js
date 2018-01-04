@@ -27,12 +27,14 @@ app.use('/service-worker.js', serve('./dist/service-worker.js'))
 const redirectRouter = require('./router/redirect')
 const apiRouter = require('./router/api')
 const SEORouter = require('./router/SEO')
+const annualRouter = require('./router/annual')
 const indexRouter = require('./router/index')
 
 app.use(redirectRouter)
 app.use('/api', apiRouter)
 app.use(SEORouter)
-app.use(indexRouter)
+app.use(annualRouter)
+app.use(indexRouter) // index router must at the end
 
 const port = process.env.PORT || 9594
 app.listen(port, () => {

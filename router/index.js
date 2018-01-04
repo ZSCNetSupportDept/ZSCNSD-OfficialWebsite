@@ -1,10 +1,12 @@
 /**
+ * the main router. This router must at the end
+ *
  * Created by Clovin on 04/01/2018.
  */
 let express = require('express')
 let router = express.Router()
+const path = require('path')
 const ssr = require('../utils/ssr')
-
 const isProd = process.env.NODE_ENV === 'production'
 
 router.get(`/not-support`, (req, res) => {
