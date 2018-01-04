@@ -79,6 +79,6 @@ function getWorkList () {
   return data
 }
 
-let workListModel = { start, refreshData, getWorkList }
+const workListModel = { start, refreshData, getWorkList }
 
 module.exports = workListModel

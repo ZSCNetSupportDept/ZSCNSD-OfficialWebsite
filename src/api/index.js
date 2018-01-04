@@ -8,5 +8,5 @@ import {getDomain} from 'create-api'
 const domain = getDomain()
 
 export function fetchWorkList () {
-  return axios.get(domain + '/workList').then(res => res.data)
+  return axios.get(domain + '/api/workList').then(res => res.data)
 }
