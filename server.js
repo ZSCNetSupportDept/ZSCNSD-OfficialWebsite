@@ -3,6 +3,7 @@ const favicon = require('serve-favicon')
 const compression = require('compression')
 const microcache = require('route-cache')
 const path = require('path')
+const ssr = require('./utils/ssr')
 const resolve = file => path.resolve(__dirname, file)
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -34,7 +35,12 @@ app.use(redirectRouter)
 app.use('/api', apiRouter)
 app.use(SEORouter)
 app.use(annualRouter)
-app.use(indexRouter) // index router must at the end
+app.use(indexRouter)
+
+ssrData = ssr.start(app)
+app.get('*', isProd ? ssrData.render : (req, res) => {
+  ssrData.readyPromise.then(() => ssrData.render(req, res))
+})
 
 const port = process.env.PORT || 9594
 app.listen(port, () => {
