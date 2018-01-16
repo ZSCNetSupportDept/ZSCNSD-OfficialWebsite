@@ -4,6 +4,8 @@ The official website of ZSC Net Support Department
 
 ## Build Setup
 
+Before starting, you need to add SSL config file to ./config folder. Please contact Clovin to get config files.
+
 ``` bash
 # install dependencies
 npm install

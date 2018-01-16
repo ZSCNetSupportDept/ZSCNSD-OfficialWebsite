@@ -1,4 +1,6 @@
 const express = require('express')
+const https = require('https')
+const fs = require('fs')
 const favicon = require('serve-favicon')
 const compression = require('compression')
 const microcache = require('route-cache')
@@ -7,6 +9,7 @@ const ssr = require('./utils/ssr')
 const resolve = file => path.resolve(__dirname, file)
 
 const isProd = process.env.NODE_ENV === 'production'
+!isProd && (process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0) // avoid https reject
 
 const app = express()
 
@@ -46,3 +49,16 @@ const port = process.env.PORT || 9594
 app.listen(port, () => {
   console.log(`server started at localhost:${port}`)
 })
+// const options = {
+//   key: fs.readFileSync('./config/2_www.zsxyww.com.key'),
+//   cert: fs.readFileSync('./config/1_www.zsxyww.com_bundle.crt')
+// }
+// https.createServer(options, app)
+//      .listen(port, (error) => {
+//        if (error) {
+//          console.error(error)
+//          return process.exit(1)
+//        } else {
+//          console.log('Listening on port: ' + port + '.')
+//        }
+//      })
