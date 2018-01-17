@@ -1,6 +1,6 @@
 # 电子科技大学中山学院校园网络指引
 
-- [前言](/guide/forword)
+- [前言](/guide/foreword)
 - [校园网络环境](/guide/netenv)
 - [电信电脑端上网前的准备](/guide/prepareDX)
 - [电信电脑端设置上网(Windows)](/guide/setWindowsDX)

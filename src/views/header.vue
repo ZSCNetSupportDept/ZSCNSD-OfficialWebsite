@@ -23,15 +23,15 @@
             <a href="javascript:void(0);">关于我们</a>
             <ul class="header-nav--nesting">
               <li class="header-nav__item--nesting">
-                <a href="http://wiki.sola.love" target="_blank">网维wiki</a>
+                <a href="http://wiki.sola.love" target="_blank" rel="noopener">网维wiki</a>
               </li>
 
               <li class="header-nav__item--nesting">
-                <a href="https://baike.baidu.com/item/电子科技大学中山学院网络维护科" target="_blank">百度百科</a>
+                <a href="https://baike.baidu.com/item/电子科技大学中山学院网络维护科" target="_blank" rel="noopener">百度百科</a>
               </li>
 
               <li class="header-nav__item--nesting">
-                <a href="http://baike.sogou.com/v63143404.htm?fromTitle=电子科技大学中山学院网络维护科" target="_blank">搜狗百科</a>
+                <a href="http://baike.sogou.com/v63143404.htm?fromTitle=电子科技大学中山学院网络维护科" target="_blank" rel="noopener">搜狗百科</a>
               </li>
             </ul>
           </li>
@@ -45,7 +45,7 @@
       </div>
 
       <div class="header-logo">
-        <img src="../assets/images/logo.jpg">
+        <img src="../assets/images/logo.jpg" alt="logo">
       </div>
     </div>
   </header>

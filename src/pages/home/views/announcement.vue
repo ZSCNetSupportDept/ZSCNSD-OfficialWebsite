@@ -101,7 +101,7 @@
   }
 
   .carousel-guide {
-    background-image: url("../image/an_img1.png");
+    background-image: url("../image/an_img1.jpg");
   }
 
   .carousel-guide__content {
@@ -147,7 +147,7 @@
   }
 
   .carousel-about {
-    background-image: url("../image/an_img2.png");
+    background-image: url("../image/an_img2.jpg");
   }
 
   .carousel-about h2 {

@@ -45,10 +45,7 @@ app.get('*', isProd ? ssrData.render : (req, res) => {
   ssrData.readyPromise.then(() => ssrData.render(req, res))
 })
 
-const port = process.env.PORT || 9594
-// app.listen(port, () => {
-//   console.log(`server started at localhost:${port}`)
-// })
+const port = process.env.PORT || 443
 const options = {
   key: fs.readFileSync(path.join(__dirname, './config/2_www.zsxyww.com.key')),
   cert: fs.readFileSync(path.join(__dirname, './config/1_www.zsxyww.com_bundle.crt'))

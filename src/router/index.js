@@ -112,10 +112,6 @@ export function createRouter () {
           {
             path: 'joinUs',
             component: guideJoinUs
-          },
-          {
-            path: '*',
-            component: notFoundPage
           }
         ]
       },
@@ -134,10 +130,6 @@ export function createRouter () {
           {
             path: 'paper',
             component: repairGuidePaper
-          },
-          {
-            path: '*',
-            component: notFoundPage
           }
         ]
       },
