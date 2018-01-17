@@ -1,5 +1,5 @@
 const express = require('express')
-const https = require('https')
+const http2 = require('http2')
 const fs = require('fs')
 const favicon = require('serve-favicon')
 const compression = require('compression')
@@ -46,19 +46,18 @@ app.get('*', isProd ? ssrData.render : (req, res) => {
 })
 
 const port = process.env.PORT || 9594
-app.listen(port, () => {
-  console.log(`server started at localhost:${port}`)
-})
-// const options = {
-//   key: fs.readFileSync('./config/2_www.zsxyww.com.key'),
-//   cert: fs.readFileSync('./config/1_www.zsxyww.com_bundle.crt')
-// }
-// https.createServer(options, app)
-//      .listen(port, (error) => {
-//        if (error) {
-//          console.error(error)
-//          return process.exit(1)
-//        } else {
-//          console.log('Listening on port: ' + port + '.')
-//        }
-//      })
+// app.listen(port, () => {
+//   console.log(`server started at localhost:${port}`)
+// })
+const options = {
+  key: fs.readFileSync('./config/2_www.zsxyww.com.key'),
+  cert: fs.readFileSync('./config/1_www.zsxyww.com_bundle.crt')
+}
+http2.createServer(options, app)
+     .listen(port, (err) => {
+       if (err) {
+         throw new Error(err)
+       }
+
+       console.log(`server started at localhost:${port}`)
+     })
