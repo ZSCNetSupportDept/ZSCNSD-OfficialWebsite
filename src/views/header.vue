@@ -4,15 +4,15 @@
       <nav class="header-nav" :class="{ 'header-nav--active': openMenu }">
         <ul>
           <li class="header-nav__item">
-            <router-link to="/home">首页</router-link>
+            <router-link to="/">首页</router-link>
           </li>
 
           <li class="header-nav__item">
-            <router-link to="/home#repairnav">报修导航</router-link>
+            <router-link to="/#repairnav">报修导航</router-link>
           </li>
 
           <li class="header-nav__item">
-            <router-link to="/home#worklist">值班表</router-link>
+            <router-link to="/#worklist">值班表</router-link>
           </li>
 
           <li class="header-nav__item">

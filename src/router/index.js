@@ -8,6 +8,8 @@ Vue.use(Router)
 
 const homePage = () => import('../pages/home/home.vue')
 
+const notFoundPage = () => import('../pages/404/404.vue')
+
 const guidePage = () => import('../pages/guide/guide.vue')
 const guideForeword = () => import('../pages/guide/article/foreword/foreword.md')
 const guideNetEnv = () => import('../pages/guide/article/netenv/netenv.md')
@@ -113,7 +115,7 @@ export function createRouter () {
           },
           {
             path: '*',
-            component: guideForeword
+            component: notFoundPage
           }
         ]
       },
@@ -135,11 +137,11 @@ export function createRouter () {
           },
           {
             path: '*',
-            component: repairGuideWechat
+            component: notFoundPage
           }
         ]
       },
-      { path: '*', component: homePage },
+      { path: '*', component: notFoundPage },
     ]
   })
 }
