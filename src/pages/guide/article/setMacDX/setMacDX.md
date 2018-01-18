@@ -8,7 +8,7 @@
 
 2. 在dock右边找到下载并点击
 
-   ![](./images/setMacDX_img2.png)
+   ![](./images/setMacDX_img2.jpg)
 
 3. 找到客户端图标并拖拽到桌面
 
@@ -20,7 +20,7 @@
 
 5. 打开 安全性与隐私
 
-   ![](./images/setMacDX_img5.png)
+   ![](./images/setMacDX_img5.jpg)
 
 6. 在窗口左下角点击小锁头图标
 
@@ -32,7 +32,7 @@
 
 8. 勾选任何来源(稍后会更改为较为安全的选项)，并且允许
 
-   ![](./images/setMacDX_img8.png)
+   ![](./images/setMacDX_img8.jpg)
 
 9. 在桌面找到执行程序双击运行
 
@@ -54,7 +54,7 @@
 
 - 出现非校园客户端网络认证环境
 
-   ![](./images/setMacDX_img13.png)
+   ![](./images/setMacDX_img13.jpg)
 
   解决方案：
 
@@ -62,11 +62,11 @@
   
     1. 打开系统设置，选择网络
     
-       ![](./images/setMacDX_img14.png)
+       ![](./images/setMacDX_img14.jpg)
     
     2. 在左方选择以太网
     
-       ![](./images/setMacDX_img15.png)
+       ![](./images/setMacDX_img15.jpg)
     
     3. 如果 配置ipv4 出现手动选项，则调回DHCP
     
@@ -74,7 +74,7 @@
     
     4. 点击应用
     
-       ![](./images/setMacDX_img17.png)
+       ![](./images/setMacDX_img17.jpg)
     
     5. 等待出现正确的IP(172开头)
     
@@ -86,7 +86,7 @@
     
     8. 在左侧列表选择usb，看一看设备中有没有usb网卡（无法编写雷电接口教程，应该相似） 
     
-       ![](./images/setMacDX_img19.png)
+       ![](./images/setMacDX_img19.jpg)
     
     9. 如果没有的话：
     
@@ -96,7 +96,7 @@
       
     10. 有的话，回到设置，点击
     
-       ![](./images/setMacDX_img20.png)
+       ![](./images/setMacDX_img20.jpg)
     
     11. 选择接口列表选择usb以太网，并点击创建
     
@@ -104,11 +104,11 @@
     
     12. 点击应用
     
-       ![](./images/setMacDX_img22.png)
+       ![](./images/setMacDX_img22.jpg)
     
     13. 等几秒
     
-       ![](./images/setMacDX_img23.png)
+       ![](./images/setMacDX_img23.jpg)
     
     14. 之后再试试连接吧
     
