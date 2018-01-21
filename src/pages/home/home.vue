@@ -62,7 +62,7 @@
         this.youkuSrc = ``
       },
       watchVideo () {
-        this.youkuSrc = `http://player.youku.com/embed/XMTcyNzQ1NjM1Mg==`
+        this.youkuSrc = `https://player.youku.com/embed/XMTcyNzQ1NjM1Mg==`
       }
     }
   }
