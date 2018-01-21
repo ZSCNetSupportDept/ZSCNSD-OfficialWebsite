@@ -4,6 +4,7 @@ const fs = require('fs')
 const favicon = require('serve-favicon')
 const compression = require('compression')
 const microcache = require('route-cache')
+const helmet = require('helmet')
 const path = require('path')
 const ssr = require('./utils/ssr')
 const resolve = file => path.resolve(__dirname, file)
@@ -20,6 +21,7 @@ const serve = (path, cache) => express.static(resolve(path), {
   maxAge: cache && isProd ? 1000 * 60 * 60 * 24 * 30 : 0
 })
 
+app.use(helmet())
 app.use(compression({ threshold: 0 }))
 app.use(favicon('./public/images/logo/logo-48.png'))
 app.use('/dist', serve('./dist', true))

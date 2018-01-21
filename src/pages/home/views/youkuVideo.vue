@@ -38,6 +38,8 @@
     height: 60%;
     max-width: 1170px;
     max-height: 660px;
+
+    background-color: #000;
   }
 
   @media (max-width: 600px) {
