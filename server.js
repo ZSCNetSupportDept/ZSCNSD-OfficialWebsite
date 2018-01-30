@@ -1,5 +1,5 @@
 const express = require('express')
-const https = require('spdy')
+const http2 = require('spdy')
 const fs = require('fs')
 const favicon = require('serve-favicon')
 const compression = require('compression')
@@ -52,7 +52,7 @@ const options = {
   key: fs.readFileSync(path.join(__dirname, './config/2_www.zsxyww.com.key')),
   cert: fs.readFileSync(path.join(__dirname, './config/1_www.zsxyww.com_bundle.crt'))
 }
-https.createServer(options, app)
+http2.createServer(options, app)
      .listen(port, (err) => {
        if (err) {
          throw new Error(err)
