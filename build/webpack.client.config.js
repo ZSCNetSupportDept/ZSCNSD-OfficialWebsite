@@ -52,10 +52,6 @@ if (process.env.NODE_ENV === 'production') {
       staticFileGlobsIgnorePatterns: [/\.map$/, /\.json$/],
       runtimeCaching: [
         {
-          urlPattern: '/',
-          handler: 'networkFirst'
-        },
-        {
           urlPattern: '/guide/:article',
           handler: 'networkFirst'
         },
