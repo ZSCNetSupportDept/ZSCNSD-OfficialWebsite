@@ -1,5 +1,5 @@
 <template>
-  <div class="cv-carousel" @mouseenter="stopLoop" @mouseleave="beginLoop">
+  <div class="cv-carousel" @mouseover="stopLoop" @mouseout="beginLoop">
     <slot></slot>
 
     <div class="cv-carousel-nav">
@@ -39,12 +39,13 @@
         })
       },
       beginLoop () {
-        this.timer = setInterval(() => {
+        this.timer = setTimeout(() => {
           this.activeIndex = (this.activeIndex + 1) % this.items.length
+          this.beginLoop()
         }, 5000)
       },
       stopLoop () {
-        clearInterval(this.timer)
+        clearTimeout(this.timer)
         this.timer = null
       }
     },
