@@ -3,7 +3,7 @@ const http2 = require('spdy')
 const fs = require('fs')
 const favicon = require('serve-favicon')
 const compression = require('compression')
-const microcache = require('route-cache')
+// const microcache = require('route-cache')
 const helmet = require('helmet')
 const path = require('path')
 const LRU = require('lru-cache')
@@ -18,8 +18,8 @@ const isProd = process.env.NODE_ENV === 'production'
 
 const app = express()
 
-const useMicroCache = process.env.MICRO_CACHE !== 'false'
-app.use(microcache.cacheSeconds(1, req => useMicroCache && req.originalUrl))
+// const useMicroCache = process.env.MICRO_CACHE !== 'false'
+// app.use(microcache.cacheSeconds(1, req => useMicroCache && req.originalUrl))
 
 const serve = (path, cache) => express.static(resolve(path), {
   maxAge: cache && isProd ? 1000 * 60 * 60 * 24 * 30 : 0
@@ -61,6 +61,7 @@ function createRenderer (bundle, options) {
     runInNewContext: false
   }))
 }
+
 let renderer
 let readyPromise
 const templatePath = resolve('./src/index.template.html')
@@ -88,16 +89,17 @@ if (isProd) {
     }
   )
 }
+
 function render (req, res) {
   const s = Date.now()
 
-  res.setHeader("Content-Type", "text/html")
-  res.setHeader("Server", serverInfo)
+  res.setHeader('Content-Type', 'text/html')
+  res.setHeader('Server', serverInfo)
 
   const handleError = err => {
     if (err.url) {
       res.redirect(err.url)
-    } else if(err.code === 404) {
+    } else if (err.code === 404) {
       res.status(404).send('404 | Page Not Found')
     } else {
       // Render Error Page or Redirect
@@ -121,6 +123,7 @@ function render (req, res) {
     }
   })
 }
+
 app.get('*', isProd ? render : (req, res) => {
   readyPromise.then(() => render(req, res))
 })
