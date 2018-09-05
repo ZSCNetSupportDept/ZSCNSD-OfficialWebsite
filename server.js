@@ -47,7 +47,7 @@ app.use(SEORouter)
 app.use(annualRouter)
 app.use(indexRouter)
 
-ssrData = ssr.start(app)
+const ssrData = ssr.start(app)
 app.get('*', isProd ? ssrData.render : (req, res) => {
     ssrData.readyPromise.then(() => ssrData.render(req, res))
 })
