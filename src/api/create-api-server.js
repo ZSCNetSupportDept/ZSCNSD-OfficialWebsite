@@ -5,6 +5,5 @@
 const isDev = process.env.NODE_ENV !== 'production'
 
 export function getDomain () {
-  // return isDev ? `http://localhost:9594` : `https://zsxyww.com`
-  return isDev ? `http://localhost:9594` : `http://localhost:9594`
+  return isDev ? `http://localhost:9594` : `https://zsxyww.com`
 }
