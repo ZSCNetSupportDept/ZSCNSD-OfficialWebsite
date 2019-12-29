@@ -1,5 +1,4 @@
 FROM daocloud.io/library/node
-MAINTAINER SanXian
 EXPOSE 9594
 WORKDIR ZSCNSD-OfficialWebsite
 COPY ./ ./
