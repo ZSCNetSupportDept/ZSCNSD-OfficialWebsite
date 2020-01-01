@@ -19,3 +19,13 @@ npm run build
 # start server in production environment
 npm run start
 ```
+
+## For Docker user
+``` bash
+# Build an image from a Dockerfile
+docker build .
+# run docker
+docker run -d -p (port you wanted):9594 -v /root/sheet:/ZSCNSD-OfficialWebsite/models/workList/sheets (name you given to the docker)
+# NOTICE:
+  If you have updated worklist ,'-v /root/sheet:/ZSCNSD-OfficialWebsite/models/workList/sheets' is unnecessary.
+  Otherwise you can deploy nginx/apache/candy... on your host enviroment and use Reverse Proxy to do better.
