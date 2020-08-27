@@ -27,13 +27,6 @@
           <p>请尽量联系当天值班负责人，若联系不上，请联系其他负责人</p>
           <router-link to="/repairGuide/phone" class="btn">了解更多</router-link>
         </div>
-
-        <div class="content__item">
-          <cv-iconfont code="icon-weibo"></cv-iconfont>
-          <h3>微博报修</h3>
-          <p>关注我们的微博，私信给我们电话号码和宿舍号等信息</p>
-          <a href="http://weibo.com/zsxyww" class="btn">了解更多</a>
-        </div>
       </div>
     </div>
   </div>
